@@ -3,6 +3,7 @@ import loginRoutes from './routes/login.routes.js';
 import postRoutes from './routes/register.routes.js';
 import jwt from 'jsonwebtoken';
 import cors from 'cors';
+import { PORT } from './config.js';
 
 
 const app = Express();
@@ -53,5 +54,5 @@ export function validateToken(req, res, next) {
   }
 }
 
-app.listen(3000);
+app.listen(PORT);
 console.log("Server is running on port 3000");
